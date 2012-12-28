@@ -50,10 +50,8 @@ class ptHTTP():
     def DELETE(self, data = None):
         if data is not None:
             self.data = data
-        response = requests.delete(self.url,data = self.data,headers=self.headers)
-
-        print response
-        pass
+        response = requests.delete(self.url, auth=self.auth, data = self.data, headers=self.headers)
+        return response
 
 
 '''
