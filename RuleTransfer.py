@@ -27,7 +27,7 @@ account_name = configParser.get('source','account_name')
 #Set source URL and auth
 source_url = configParser.get('source','streamRulesURL')
 print 'Getting rules from: ' + source_url
-#https://api.gnip.com:443/accounts/gnip-biz/publishers/twitter/streams/track/prod/rules.json
+#https://api.gnip.com:443/accounts/<account_name>/publishers/<publisher>/streams/track/prod/rules.json
 oHTTP.setURL(source_url)
 oHTTP.setAuth(auth)
 oHTTP.addHeader("X-ON-BEHALF-OF-ACCOUNT:" + account_name)
