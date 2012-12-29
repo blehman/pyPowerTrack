@@ -47,7 +47,7 @@ auth = (user, base64.b64decode(passwordEncoded))
 #Set target URL and auth
 target_url = configParser.get('target','streamRulesURL')
 print 'Posting rules to: ' + target_url
-#https://api.gnip.com:443/accounts/jim/publishers/twitter/replay/track/prod/rules.json
+#https://api.gnip.com:443/accounts/<account_name>/publishers/t<publisher>/replay/track/<>/rules.json
 oHTTP.setURL(target_url)
 oHTTP.setAuth(auth)
 
